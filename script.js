@@ -15,3 +15,21 @@ function calculateAndDisplay(){
     document.getElementById('amtPerPersonResult').innerText = 'Amount per person: $' + tip.toFixed(2)
 
 }
+
+function calculateTip(bill, quality){
+    if (quality === 'Great'){
+        bill * .2
+    } else if (quality === 'Good'){
+        return bill *.15
+    } else if (quality === 'Poor'){
+        return bill *.10
+    }
+}
+
+function calculateTotalBill(bill, tip){
+return bill + tip 
+}
+
+function calcAmtPerPers (totalBill, numOfPpl){
+    return totalBill / numOfPpl
+}
